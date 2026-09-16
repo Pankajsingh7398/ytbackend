@@ -160,7 +160,7 @@ const refressAccessToken = asyncHandler(async (req, res) => {
     if (!User) {
         throw new ApiError(401, "invalid Refresh token")
     }
-    if (incomingRefreshToken) {
+    if (!incomingRefreshToken) {
         throw ApiError(401, "refresh token is expired or used")
 
     }
