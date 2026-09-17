@@ -2,7 +2,7 @@ import { Timestamp } from "mongodb";
 import Mongoose,{schema } from "mongoose";
 const subscriptionSchema = new schema({
     subscriber:{
-        type:schema.Types.ObjectId,
+        type:schema.Types.ObjectId,  
         ref:"User"
     },
     channel:{
